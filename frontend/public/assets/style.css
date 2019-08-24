@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    line-height: 1em;
+}
+
+body {
+    font-family: 'Mukta', sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    background: #f2f2f2;
+}
+
+.header {
+    background: #fff;
+    padding: 20px;
+}
+
+.content {
+    padding: 20px;
+}
+
+.stats {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.stats__header {
+    margin-bottom: 10px;
+}
+
+.stats__table {
+    width: 100%;
+    text-align: left;
+}
+
+.stats__table thead {
+    border-bottom: #ddd solid 1px;
+}
+
+.stats__table tbody tr:nth-child(odd) {
+    background: #f4f4f4;
+}
+
+.stats__table td, .stats__Table th {
+    padding: 5px 10px;
+}
+
+.screen {
+    width: 100vw;
+    height: 100vh;
+}
+
+.screen__header {
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.screen__content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.countdown {
+    font-size: 80px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.levels {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.level, .result {
+    display: inline-block;
+    width: 20vw;
+    height: 10vh;
+    background: #1756df;
+    border: #1756df solid 4px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 40px;
+}
+
+.gameplay__clicker {
+    background: #1756df;
+    width: 400px;
+    height: 400px;
+    border-radius: 200px;
+    border: none;
+    color: #fff;
+    font-size: 100px;
+    font-weight: bold;
+    outline: none;
+}
+
+.gameplay__time {
+    text-transform: uppercase;
+    position: absolute;
+    left: 200px;
+    top: 400px;
+}
+
+.gameplay__clicked {
+    position: absolute;
+    right: 200px;
+    top: 400px;
+}
+
+.gameplay p {
+    font-size: 2em;
+    font-weight: bold;
+}

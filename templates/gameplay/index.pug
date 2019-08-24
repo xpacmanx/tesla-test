@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(href="https://fonts.googleapis.com/css?family=Mukta:300,400,700,800&display=swap&subset=latin-ext" rel="stylesheet")
+        link(rel="stylesheet" href="/assets/style.css")
+        title Tesla Test
+    body
+        main.content#app
+            .screen.screen--levels(v-show="is_play == 0 && level == 0")
+                .screen__header Choose level
+                .screen__content
+                    .levels
+                        button.level(@click="setLevel(1)") 1
+                        button.level(@click="setLevel(2)") 2
+                        button.level(@click="setLevel(3)") 3
+            .screen.screen-countdown(v-show="is_play == 0 && level > 0")
+                .screen__content 
+                    .countdown {{countdown == 0 ? 'Go!' : countdown}}
+            .screen.screen--gameplay(v-show="is_play == 1")
+                .screen__header Click the button!
+                .screen__content
+                    .gameplay
+                        .gameplay__time Time
+                            p {{time}}
+                        .gameplay__clicked Need to click 
+                            p {{max_clicked}}
+                        button.gameplay__clicker(@click="clicker()") {{clicked}}
+            .screen.screen--win(v-show="is_play == 2")
+                .screen__header You win
+                .screen__content
+                    button.result(@click="reset()") Try again
+            .screen.screen--fail(v-show="is_play == 3")
+                .screen__header Game over
+                .screen__content
+                    button.result(@click="reset()") Try again
+        script(src="/assets/vue.min.js")
+        script(src="/socket.io/socket.io.js")
+        script(src="/assets/ui.js")
