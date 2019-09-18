@@ -1,19 +1,16 @@
 class Db {
-    constructor(){
-        
-    }
+  async getBest() {
+    // return list of 10 best
+    return [];
+  }
 
-    async getBest(){
-        return [];
-    }
+  async getLast() {
+    return [];
+  }
 
-    async getLast(){
-        return [];
-    }
-
-    add(result){
-        return true;
-    }
+  add(result) {
+    return result;
+  }
 }
 
 const stats = new Db();
